@@ -313,4 +313,13 @@ class Config extends \Magento\Payment\Gateway\Config\Config
     {
         return $this->storeManager->getStore($storeId)->getWebsiteId();
     }
+
+    /**
+     * @param int|null $storeId
+     * @return string
+     */
+    public function getFormLocale($storeId = null)
+    {
+        return $this->getValue('form_locale', $storeId);
+    }
 }
