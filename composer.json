@@ -5,7 +5,9 @@
   "license": "Apache-2.0",
   "version": "103.9.0",
   "require": {
-    "magento/framework": "^102.0.0|^103.0.0"
+    "php": "^8.2",
+    "magento/framework": "^102.0.0|^103.0.0",
+    "laminas/laminas-http": "^2.15"
   },
   "autoload": {
     "files": [
