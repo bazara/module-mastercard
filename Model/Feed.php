@@ -164,7 +164,7 @@ class Feed
             ]
         );
         $feedUrl = $this->backendConfig->getValue(self::XML_FEED_URL_PATH);
-        $curl->write(Client::GET, $feedUrl, '1.0');
+        $curl->write('GET', $feedUrl, '1.0');
         $data = $curl->read();
         $data = preg_split('/^\r?$/m', $data, 2);
         $data = trim($data[1]);
