@@ -38,7 +38,7 @@ class Rest extends Curl
     public function write($method, $url, $httpVer = '1.1', $headers = [], $body = '')
     {
         if ($url instanceof Http) {
-            $url = $url->getUri();
+            $url = $url->toString();
         }
         $this->_applyConfig();
 
