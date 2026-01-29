@@ -122,7 +122,7 @@ class Rest implements ClientInterface
 
             $this->adapter->write(
                 $transferObject->getMethod(),
-                \Laminas\Uri\Http::parse($transferObject->getUri()),
+                new \Laminas\Uri\Http($transferObject->getUri()),
                 self::HTTP_1,
                 $headers,
                 $this->json->serialize($transferObject->getBody())
